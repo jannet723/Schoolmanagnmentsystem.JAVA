@@ -1,1 +1,1 @@
-# SCHOOLMANAGMENTSYSTEM.JAVA
+# Schoolmanagmentsystem.JAVA
