@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System - Student Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 School Management System</h1>
+            <p class="subtitle">Student Information Portal</p>
+        </header>
+
+        <div class="controls">
+            <button id="addStudentBtn" class="btn btn-primary">
+                <span>➕</span> Add New Student
+            </button>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search students...">
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="totalStudents">0</div>
+                <div class="stat-label">Total Students</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="maleCount">0</div>
+                <div class="stat-label">Male Students</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="femaleCount">0</div>
+                <div class="stat-label">Female Students</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="classCount">0</div>
+                <div class="stat-label">Classes</div>
+            </div>
+        </div>
+
+        <div class="students-grid" id="studentsGrid">
+            <!-- Student cards will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Modal for adding/editing students -->
+    <div id="studentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Add New Student</h2>
+            <form id="studentForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="studentId">Student ID</label>
+                        <input type="number" id="studentId" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="classId">Class ID</label>
+                        <input type="number" id="classId" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dateOfBirth">Date of Birth</label>
+                        <input type="date" id="dateOfBirth" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Student</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
